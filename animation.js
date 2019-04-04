@@ -1,5 +1,6 @@
 
-const fourthOfJuly =  new Date("2019/4/25 22:30:12").getTime();
+/*--------------------- Timer ------------------*/
+const fourthOfJuly =  new Date("2019/06/02 14:30:00").getTime();
 // countdown
 let timer = setInterval(function() {
 
@@ -22,3 +23,28 @@ let timer = setInterval(function() {
    
 
 }, 1000);
+
+
+/*--------------------- Show fixed vote panel------------------*/
+window.onload = function(){
+  document.onmousewheel = function(e){
+  //console.log(window.pageYOffset);
+
+  if(window.pageYOffset>200){
+    showFixedVote();
+  }
+  else{
+    hideFixedVote();
+  }
+  }
+  }
+
+  function showFixedVote(){
+    $(".vote").css("position","fixed"); 
+    $(".vote").toggleClass('navbar-fixed-bottom');
+  }
+
+  function hideFixedVote(){
+    $(".vote").css("position","relative"); 
+    $(".vote").toggleClass('navbar-fixed-bottom');
+  }

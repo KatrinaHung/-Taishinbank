@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
        @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-      @import url('fonts.googleapis.com/earlyaccess/notosanssc.css');
-@import url('fonts.googleapis.com/earlyaccess/notosansjp.css');
+      @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjp.css');
     </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-        <script src="animation.js"></script>
+       
       <!--------------------NAV------------->
       <nav class="navbar navbar-light sticky-top ">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -139,24 +139,66 @@
         </div>
          <!--------------------News------------->
         <div class="row newsTop">
-            <div class="col-2 offset-sm-2">最新消息</div>
+            <div class="col-md-2 offset-2">最新消息</div>
         </div>
         <div class="row newsBottom">
-            <div class="col-md-1 offset-sm-3">
-              <div class="arrowCircle"></div>
+            <div class="col-md-1 offset-sm-3 d-none d-md-block">
+              <div class="arrowCircle"><div class="arrow"></div></div>
             </div>
-            <div class="col-md-5">
-                <ul><li><div class="newsPoint"></div><p>2019.4.12第十七屆台新藝術獎提名</p></li>
-                    <li><div class="newsPoint"></div><p>2019.3.17第十七屆台新藝術獎入圍</p></li>
+            <div class="col-md-6">
+                <ul class="newsList">
+                  <li class="latestNews"><a href="#"><div class="newsPoint "></div><p>2019.3.17    第十七屆台新藝術獎提名觀察人 ─ 2018年度觀察報告</p></a></li>
+                    <li><a href="#"><div class="newsPoint"></div><p>2019.2.25    第十七屆台新藝術獎入圍名單公布</p></a></li>
+                    <li><a href="#"><div class="newsPoint"></div><p>2019.4.12    第十七屆台新藝術獎提名觀察人 ─ 2018年度觀察報告</p></a></li>
+                    <li><a href="#"><div class="newsPoint"></div><p>2019.3.17    第十七屆台新藝術獎入圍名單公布</p></a></li>
+                    <li><a href="#"><div class="newsPoint"></div><p>2019.3.17    第十七屆台新藝術獎入圍名單公布</p></a></li>
                 </ul>
             </div>
         </div>
-           
+        <!--------------------Footer------------->
+        <div class="row footer">
+           <div class="col-md-8 partner1">partner1</div>
+         
+          <div class="col-md-8 partner2">
+              <div class="row sponsor1">
+                <div class="col-md-2">
+                  <p>主辦單位</p>
+                </div>
+                <div class="col-md-6">
+                    <p>特別感謝</p>
+                  </div>
+              </div>
+
+          </div>
+         <div class="col-md-8 contact">
+              <p class="contactTitle firstContactTitle">TEL</p>
+              <p>台北市仁愛路四段118號15樓</p>
+              <p class="contactTitle">ADD</p>
+              <p>+886-2-3707-6955</p>
+              <p class="contactTitle">EML</p>
+              <p>info@taishinart.org.tw</p>
+              </div>
+            <div class="col-md-8 copyright"><p>COPYRIGHT   2019 Taishin Bank Foundation for Arts and Culture ALL RIGHTS RESERVED</p></div>
+        
       </div>
+      <!--------------------vote------------->
+      <div class="row vote">
+          <div class="col-md-10 voteWord"><p>我心目中得主</p></div>
+          <div class="col-md-2 voteRed">
+            <div class="voteCircle1"></div>
+            <div class="voteline"></div>
+            <div class="voteCircle2"></div>
+            <div class="voteCircle3"></div>
+          </div>
+      </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="animation.js"></script>
   </body>
 </html>

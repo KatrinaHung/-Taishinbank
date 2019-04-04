@@ -5,7 +5,9 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+    color: #6f6155;
 }
+
 
 .menuBurger{
   width: 80px;
@@ -55,6 +57,7 @@ html,body{
     position: relative;
 
 }
+
 .balloon{
   background-color: #bc2d2d;
   width: 184px;
@@ -217,7 +220,7 @@ html,body{
   width: 20px;
   height: 20px;
   position: relative;  /*方便相对于父元素进行定位*/
-  margin: 0 15px;
+  margin: 4px 15px;
 
 }
 .icon-cross::before,.icon-cross::after{
@@ -331,15 +334,67 @@ html,body{
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color:#bc2d2d;
-    margin-right: 30px;
+    margin: 5px 15px 7px 30px;
+    border: 1px #bc2d2d solid;
+    
 }
 .arrowCircle{
   width: 175px;
   height: 175px;
   border: solid 1px #bc2d2d;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
 }
+.arrow {
+  background: #bc2d2d;
+  height: 1px;
+  width: 21px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.arrow:before, .arrow:after {
+    content: "";
+    background: #bc2d2d;
+    position: absolute;
+    height: 1px;
+    width: 10px;
+  }
+
+  .arrow:before {
+    right: -3px;
+    bottom: -3px;
+    transform: rotate(-45deg);
+  }
+
+  .arrow:after {
+    right: -3px;
+    top: -3px;
+    transform: rotate(45deg);
+  }
+  .newsList{
+    margin-left: 70px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    
+    margin-top: 80px;
+  }
+  .newsList a{
+    color: #6f6155;
+    display: flex;
+    
+  }
+  .latestNews a{
+    color: #bc2d2d;
+    margin-bottom: 78px;
+  }
+  .latestNews .newsPoint{
+    background-color: #bc2d2d;
+  }
+
 ul{
     list-style-type: none;
 }
@@ -352,21 +407,105 @@ ul li{
     margin-top: 45px;
     color: #6e6155;
     font-size: 22px;
+    margin-bottom: 27px;
 }
 
 .newsBottom{
     margin-bottom: 45px;
 }
+/*------------------------------ footer -------------------- */
+.partner1{
+  margin-top: 100px;
+}
 
+.copyright{
+  opacity: 0.6;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888888;
+
+}
+.footer{
+  background-color: #edeceb;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 168px;
+  justify-content: center;
+}
+
+.contact{
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888888;
+}
+.contactTitle{
+  font-weight: bold;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+.firstContactTitle{
+  margin-left: 0;
+}
+/*------------------------------ vote -------------------- */
+.vote{
+  width: 100%;
+  height: 55px;
+  background-color: #6f6155;
+  margin: 0;
+  bottom: 0;
+}
+.voteWord{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.voteWord p{
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  display: flex;
+  margin: 0;
+
+}
+.voteRed{
+  background-color: #bc2d2d;
+}
+.voteCircle1{
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #f6f5f4;
+}
+.voteCircle2,.voteCircle3{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.voteCircle2{
+
+  border: solid 1px #f6f5f4;
+  background-color: #f6f5f4;
+}
+.voteCircle3{
+  border: solid 1px #edeceb;
+  background-color: #bc2d2d;
+}
 /*mobile*/
 @media screen and (max-width: 768px){
     .lookDown
     {
       display: none;
     }
+    .homepagevideo .row{
+      height: auto;
+    }
   }
   @media screen and (max-width: 992px){
     #navBackground{
       width: calc(90% - 250px);
   }
+  
 }
