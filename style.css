@@ -4,8 +4,47 @@ html,body{
     background-color: #F6F5F4 !important;
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
 }
 
+.menuBurger{
+  width: 80px;
+    height: 80px;
+    background-color: #bc2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuline{
+  width: 27px;
+  border: solid 2px #f6f5f4;
+  position: absolute;
+}
+.menuline1{
+  top: 31px;
+}
+.menuline2{
+  top: 46px;
+}
+.navbar-toggler, .navbar-light {
+  padding: 0 !important;
+  border: none !important;
+}
+.navbar{
+  background-color:#f6f5f4;
+}
+.navbar-nav{
+  background-color: #bc2d2d;
+}
+.navbar-brand{
+  padding-right: 20px;
+  
+}
+#navBackground{
+  width: calc(90% - 200px);
+  height: 80px;
+  background-image:url('material/image/pattern.png');
+}
 /*------------------------------ Timer -------------------- */
 #timer{
     height: 425px;
@@ -25,19 +64,17 @@ html,body{
   position: absolute;
 }
 #seconds,#days,#minutes,#hours{
-    font-size: 90px;
+    font-size: 80px;
     color: #ffffff;
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    font-family: 'Mina', sans-serif;
     margin-bottom: -20px;
 }
 .balloon p{
     color: #ffffff;
   display: flex;
   justify-content: center;
-  font-family: NotoSansCJKjp;
   font-size: 18px;
   font-weight: 100;
   
@@ -102,8 +139,8 @@ html,body{
     animation: balloons2 4s ease-in-out infinite;
   }
   .balloon11{
-    top: -90px;
-    left: -110px;
+    top: 140px;
+    left: -160px;
     animation: balloons2 4s ease-in-out infinite;
   }
   .balloon12{
@@ -140,23 +177,67 @@ html,body{
     transform: translateY(5px) translateX(10px) rotate(-10deg)
   }
 }
+/*------------------------------ Countdown Live -------------------- */
 
+.col-md-4{
+  padding: 0 !important;
+}
+.countdown1{
+  letter-spacing: 3.5px;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.countdown2{
+  font-size: 43px;
+  letter-spacing: 4px;
+  color: #6e6155;
+  margin: 0;
+}
+
+.live{
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.countdown3{
+  margin-left: 15px;
+  
+}
+
+#countdown p{
+  color: #6E6155;
+  text-align: center;
+}
+
+
+
+
+.icon-cross{
+  width: 20px;
+  height: 20px;
+  position: relative;  /*方便相对于父元素进行定位*/
+  margin: 0 15px;
+
+}
+.icon-cross::before,.icon-cross::after{
+  content: "";
+  position: absolute;  /*方便进行定位*/
+  height: 16px;
+  width: 1.5px;
+  top: 2px;
+  right: 9px;  /*设置top和right使图像在20*20框中居中*/
+  background-color: #6E6155;
+}
+.icon-cross::before{
+  transform: rotate(45deg);  /*进行旋转*/
+}
+.icon-cross::after{
+  transform: rotate(-45deg);
+}
 
 /*video*/
-#countdown p{
-    color: #6E6155;
-    text-align: center;
-    font-family: NotoSansCJKjp;
-}
-.col-md-4{
-    padding: 0 !important;
-}
 
-.countdown1{
-    letter-spacing: 3.5px;
-    font-size: 25px;
-    margin-top: 50px;
-}
 
 .homepagevideo .row{
     background-color:black;
@@ -179,7 +260,16 @@ html,body{
     width: 43px;
     height: 43px;
     background-color: #6f6155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     
+    
+}
+.shareButton img{
+  width: 18px;
+    height: 18px;
 }
 .lookDown{
     display: flex;
@@ -236,7 +326,7 @@ html,body{
     margin-top: 7px;
 }
 
-/* Latest News */
+/*------------------------------ News -------------------- */
 .newsPoint{
     height: 15px;
     width: 15px;
@@ -244,7 +334,12 @@ html,body{
     background-color:#bc2d2d;
     margin-right: 30px;
 }
-
+.arrowCircle{
+  width: 175px;
+  height: 175px;
+  border: solid 1px #bc2d2d;
+  border-radius: 50%;
+}
 ul{
     list-style-type: none;
 }
@@ -255,6 +350,8 @@ ul li{
 
 .newsTop{
     margin-top: 45px;
+    color: #6e6155;
+    font-size: 22px;
 }
 
 .newsBottom{
@@ -268,3 +365,8 @@ ul li{
       display: none;
     }
   }
+  @media screen and (max-width: 992px){
+    #navBackground{
+      width: calc(90% - 250px);
+  }
+}

@@ -7,17 +7,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-@import url('fonts.googleapis.com/earlyaccess/notosanssc.css');
+       @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('fonts.googleapis.com/earlyaccess/notosanssc.css');
 @import url('fonts.googleapis.com/earlyaccess/notosansjp.css');
-@import url('fonts.googleapis.com/earlyaccess/notosanskr.css');
-@import url('https://fonts.googleapis.com/css?family=Mina:400,700&subset=bengali,latin-ext');
     </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
         <script src="animation.js"></script>
+      <!--------------------NAV------------->
+      <nav class="navbar navbar-light sticky-top ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          
+            <div class="menuBurger">
+              <div class="menuline menuline1"></div>
+              <div class="menuline menuline2"></div>
+            </div>
+          </button>
+          <div id="navBackground" class="mr-auto"></div>
+          <a class="navbar-brand mr-auto" href="#"><img src="../material/image/logo.png" height="32px" class="d-inline-block align-top" alt="">
+            </a>
+            
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+ <!--------------------Homepage------------->
       <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -58,8 +88,14 @@
                 </div>
                 <div id="countdown">
                     <p class="countdown1">頒獎倒數</p>
-                    <p class="countdown2">2019/06/02</p>
-                    <p class="countdown3">testtest</p>
+                    <p class="countdown2">2019.06.02</p>
+                    <div class="live">
+                      <p>頒獎典禮</p>
+                      <div class="icon-cross">
+                      </div>
+                      <p >線上直播</p>
+                      <p class="countdown3">14:00</p>
+                  </div>
                 </div>
             </div>
             <div class="col-md-8 homepagevideo">
@@ -73,7 +109,9 @@
                     </div>
                     <div class="col-md-1 videoright">
                             <div class="row justify-content-end">
-                                    <div class="shareButton"></div>
+                                    <a class="shareButton">
+                                     <img src="../material/image/share.svg"></a>
+                                    
                             </div>
                                     
                             <div class="row justify-content-end">
@@ -99,11 +137,15 @@
         <div class="row">
                 <div class="col-12 rowhr"></div>
         </div>
+         <!--------------------News------------->
         <div class="row newsTop">
             <div class="col-2 offset-sm-2">最新消息</div>
         </div>
         <div class="row newsBottom">
-            <div class="col-md-5 offset-sm-4">
+            <div class="col-md-1 offset-sm-3">
+              <div class="arrowCircle"></div>
+            </div>
+            <div class="col-md-5">
                 <ul><li><div class="newsPoint"></div><p>2019.4.12第十七屆台新藝術獎提名</p></li>
                     <li><div class="newsPoint"></div><p>2019.3.17第十七屆台新藝術獎入圍</p></li>
                 </ul>
