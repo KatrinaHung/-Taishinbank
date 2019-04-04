@@ -1,0 +1,270 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #F6F5F4 !important;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------ Timer -------------------- */
+#timer{
+    height: 425px;
+    background-color: #e8e7e6;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.balloon{
+  background-color: #bc2d2d;
+  width: 184px;
+  height: 184px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+}
+#seconds,#days,#minutes,#hours{
+    font-size: 90px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Mina', sans-serif;
+    margin-bottom: -20px;
+}
+.balloon p{
+    color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-family: NotoSansCJKjp;
+  font-size: 18px;
+  font-weight: 100;
+  
+}
+.balloon1{
+  top: 70px;
+  left: 20px;
+  animation: balloons 4s ease-in-out infinite;
+}
+.balloon2{
+  top: 205px;
+  left: 90px;
+  animation: balloons3 4s ease-in-out infinite;
+
+}
+
+.balloon3{
+  top: 30px;
+  left: 220px;
+  animation: balloons2 6s ease-in-out infinite;
+  
+}
+.balloon4{
+  top: 230px;
+  left: 250px;
+  animation: balloons 4s ease-in-out infinite;
+  
+}
+.balloon5{
+  top: -60px;
+  left: 80px;
+  animation: balloons3 4s ease-in-out infinite;
+  
+}
+.balloon6{
+  top: 300px;
+  left: -10px;
+  animation: balloons2 4s ease-in-out infinite;
+ 
+}
+.balloon7{
+  top: 60px;
+  left: -130px;
+  animation: balloons3 4s ease-in-out infinite;
+
+}
+.balloon8{
+  top: 320px;
+  left: 350px;
+  animation: balloons2 4s ease-in-out infinite;
+  
+}
+.balloon9{
+  top: -100px;
+  left: 377px;
+  animation: balloons2 4s ease-in-out infinite;
+
+}
+.balloon10{
+    top: 130px;
+    left: 387px;
+    animation: balloons2 4s ease-in-out infinite;
+  }
+  .balloon11{
+    top: -90px;
+    left: -110px;
+    animation: balloons2 4s ease-in-out infinite;
+  }
+  .balloon12{
+    top: 60px;
+    left: 450px;
+    animation: balloons 4s ease-in-out infinite;
+
+  }
+
+@keyframes balloons{
+  0%,100%{
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(4deg);
+  }
+}
+
+
+@keyframes balloons2{
+  0%,100%{
+    transform: translateY(0) rotate(-4deg)
+  }
+  50% {
+    transform: translateY(25px) rotate(10deg)
+  }
+}
+
+@keyframes balloons3{
+  0%,100%{
+    transform: translateY(-10px) translateX(0) rotate(-4deg)
+  }
+  50%{ 
+    transform: translateY(5px) translateX(10px) rotate(-10deg)
+  }
+}
+
+
+/*video*/
+#countdown p{
+    color: #6E6155;
+    text-align: center;
+    font-family: NotoSansCJKjp;
+}
+.col-md-4{
+    padding: 0 !important;
+}
+
+.countdown1{
+    letter-spacing: 3.5px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.homepagevideo .row{
+    background-color:black;
+    height: 643px;
+}
+.videoright{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    align-content: space-between;
+}
+
+.rowhr{
+   background-color: #bc2d2d;
+   height: 8px
+}
+/*  share */
+.shareButton{
+    width: 43px;
+    height: 43px;
+    background-color: #6f6155;
+    
+}
+.lookDown{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  align-items: center;
+  bottom: -81px;
+}
+.lookDownLine{
+    height: 120px;
+    width: 2px;
+    background-color:#6f6155;
+    
+}
+
+.lookDownBall{
+    position: absolute;
+    left: 22px;
+    top: 50px;
+    width: 16px;
+    height: 16px;
+    background-color: #bc2d2d;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation-name:lookDownBallMove;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    transition: transform 500ms ease-in;
+    transition: transform 500ms ease-out;
+}
+
+@keyframes lookDownBallMove{
+    from{
+        top:20px;
+    }
+    to{
+        top:75px;
+    }
+}
+
+.lookDownBox{
+    width: 60px;
+    height: 60px;
+    background-color: #6f6155;
+    display: flex;
+    justify-content: center;
+  
+    
+}
+
+.lookDownBox p{
+    color:#ffffff;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* Latest News */
+.newsPoint{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color:#bc2d2d;
+    margin-right: 30px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    display: flex;
+}
+
+.newsTop{
+    margin-top: 45px;
+}
+
+.newsBottom{
+    margin-bottom: 45px;
+}
+
+/*mobile*/
+@media screen and (max-width: 768px){
+    .lookDown
+    {
+      display: none;
+    }
+  }
