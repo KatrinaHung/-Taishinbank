@@ -7,8 +7,128 @@ html,body{
     font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
     color: #6f6155;
 }
+/*------------------------------ Sidebar -------------------- */
+body {
+  overflow-x: hidden;
+}
+.menuGame{
+  height:36px;
+  width: 108px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #6f6155;
+  display: flex;
+  justify-content: center;
 
+}
+.menuGame_front{
+  z-index: 1;
+}
+.menuGame_back{
+  border-radius: 20.5px;
+  border: solid 1px #6f6155;
+  background-color: #f6f5f4;
+  position: absolute;
+  transform: translateY(10px);
+}
+.menuGame p{
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.9px;
+  color: #f6f5f4 !important;
+  transform: translateY(8px);
+}
+.language{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 2.3px;
+  margin-top: 54px;
+}
+.languageCn{
+  color: #6f6155 ;
+}
+.languageEn{
+  margin-left: 60px;
+  color: #6f6155;
+}
+#menu-toggle{
+  padding: 0 !important;
+  border: none;
+}
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: #d3d3d3 !important;
 
+}
+.list-group .active{
+  background-color: #939393 !important;
+  border-left: #bc2d2d 8px solid !important;
+  color: #f6f5f4 !important;
+  padding-left: 41px !important;
+
+}
+.list-group-item {
+  background-color: #d3d3d3 !important;
+  color: #6f6155 !important;
+  font-size: 17px;
+  font-weight: 500;
+  font-weight: 500;
+  letter-spacing: 3.2px;
+  padding: 0 !important;
+  padding-left: 49px !important;
+  border: none !important;    
+  display: flex !important;
+  align-content: center;                       
+}
+
+.list-group ul{
+  padding: 0;
+  
+}
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  width: 216px;
+}
+
+.sidebar-heading{
+  display: flex;
+  justify-content: center;
+}
+
+#sidebar-wrapper  {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/*------------------------------ NAV -------------------- */
 .menuBurger{
   width: 80px;
     height: 80px;
@@ -36,11 +156,39 @@ html,body{
   background-color:#f6f5f4;
 }
 .navbar-nav{
-  background-color: #bc2d2d;
+  background-color: #d3d3d3;
+  /*width: 216px;*/
+  
+  
+}
+.navbar-nav .active{
+  background-color: #939393;
+  
+  border-left: #bc2d2d 8px solid;
+  padding-left: 41px;
+  
+}
+.navbar-nav .active .nav-link{
+  color: #f6f5f4 !important;
 }
 .navbar-brand{
   padding-right: 20px;
   
+}
+.nav-link{
+  display: flex;
+}
+.nav-item{
+  color: #6f6155;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 3.2px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.navLogo{
+  margin-left: 50px;
 }
 #navBackground{
   width: calc(90% - 200px);
@@ -454,11 +602,15 @@ ul li{
   background-color: #6f6155;
   margin: 0;
   bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0 !important;
 }
 .voteWord{
   display: flex;
     justify-content: flex-end;
     align-items: center;
+    
     
 }
 .voteWord p{
@@ -468,30 +620,61 @@ ul li{
   color: #ffffff;
   display: flex;
   margin: 0;
+  margin-right: 70px;
 
 }
 .voteRed{
   background-color: #bc2d2d;
+  height: 100%;
+  display: flex;
+
 }
 .voteCircle1{
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background-color: #f6f5f4;
+  
 }
 .voteCircle2,.voteCircle3{
   width: 33px;
   height: 33px;
   border-radius: 50%;
 }
-.voteCircle2{
 
-  border: solid 1px #f6f5f4;
-  background-color: #f6f5f4;
-}
-.voteCircle3{
+.voteCircle2{
   border: solid 1px #edeceb;
   background-color: #bc2d2d;
+  box-sizing: border-box;
+  
+}
+.voteCircle3{
+box-shadow:1px 1px 0px rgba(20%,20%,40%,0.5);
+  
+  background-color: #f6f5f4;
+  transform: translateX(-55px);
+  animation: circleRoll 1s ease-in-out infinite;
+
+}
+@keyframes circleRoll{
+  from{
+    transform: translateX(-55px) rotate(0deg);
+  }
+  to{
+    transform: translateX(-33px) rotate(360deg);
+  }
+}
+
+#voteCircle{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  transform: translateX(-60px);
+}
+.voteline{
+  width: 110px;
+  height: 1px;
+  background-color: #f6f5f4;
 }
 /*mobile*/
 @media screen and (max-width: 768px){

@@ -1,4 +1,16 @@
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
 
+$(".list-group-item").hover(
+  function () {
+    $(this).addClass("active");
+  }, 
+  function () {
+    $(this).removeClass("active");
+  }
+);
 /*--------------------- Timer ------------------*/
 const fourthOfJuly =  new Date("2019/06/02 14:30:00").getTime();
 // countdown
