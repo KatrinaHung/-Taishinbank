@@ -1,3 +1,14 @@
+/*--------------------- Nav ------------------*/
+$(document).ready(function(){
+
+  $('.nav-icon2').removeClass('open');
+  $('#wrapper').addClass('toggled');
+
+	$('#nav-icon2').click(function(){
+		$(this).toggleClass('open');
+	}); 
+});
+
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
@@ -60,3 +71,28 @@ window.onload = function(){
     $(".vote").css("position","relative"); 
     $(".vote").toggleClass('navbar-fixed-bottom');
   }
+
+  /*--------------------- Show more News ------------------*/
+
+  $(".arrowCircle").click(function() {
+   
+    $(".newsList").toggleClass('open');
+  });
+
+  
+
+$(".newsList a").hover(
+  function () {
+    $(this).css("color","#bc2d2d");
+  },function(){
+  $(this).css("color","#6f6155");
+}
+);
+
+$(".latestNews a").hover(
+  function () {
+    $(this).css("color","#bc2d2d");
+  },function(){
+  $(this).css("color","#6f6155");
+}
+);
