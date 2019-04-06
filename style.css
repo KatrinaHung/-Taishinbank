@@ -918,6 +918,9 @@ ul li {
   #menu-toggle {
     margin-left: 4%;
 }
+.latestNews {
+  margin-left: 70px;
+}
 .newsTop{
   text-align: center;
 }
