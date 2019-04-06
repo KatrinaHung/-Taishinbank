@@ -1,11 +1,27 @@
 /*--------------------- Nav ------------------*/
-$(document).ready(function(){
 
+function closeMenu(){
   $('.nav-icon2').removeClass('open');
-  $('#wrapper').addClass('toggled');
+  //$('#wrapper').removeClass('toggled');
+ 
+}
+
+$(document).ready(function(){
+  
+  var wdth=$(window).width();
+
+  $(window).resize(function() {
+    console.log("wdth2:"+wdth);
+     closeMenu();
+     $('#wrapper').removeClass('toggled');
+     
+});
+
+// default close-laptop
+closeMenu();
 
 	$('#nav-icon2').click(function(){
-		$(this).toggleClass('open');
+    $(this).toggleClass('open');
 	}); 
 });
 
@@ -50,6 +66,18 @@ let timer = setInterval(function() {
 
 /*--------------------- Show fixed vote panel------------------*/
 window.onload = function(){
+  
+  //close nav
+  var wdth=$(window).width();
+  console.log('laprtop');
+  if(wdth>=768){
+    $('#wrapper').addClass('toggled');
+    console.log('wdth:'+wdth);
+  }else{
+    $('#wrapper').removeClass('toggled');
+    console.log('mobile');
+  }
+
   document.onmousewheel = function(e){
   //console.log(window.pageYOffset);
 
@@ -63,8 +91,9 @@ window.onload = function(){
   }
 
   function showFixedVote(){
-    $(".vote").css("position","fixed"); 
+    $(".shareButton").css("position","fixed"); 
     $(".vote").toggleClass('navbar-fixed-bottom');
+    $(".vote").css("position","fixed"); 
   }
 
   function hideFixedVote(){
