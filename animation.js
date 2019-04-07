@@ -1,10 +1,5 @@
 /*--------------------- Nav ------------------*/
 
-function closeMenu(){
-  $('.nav-icon2').removeClass('open');
-  //$('#wrapper').removeClass('toggled');
- 
-}
 
 $(document).ready(function(){
   
@@ -12,17 +7,20 @@ $(document).ready(function(){
 
   $(window).resize(function() {
     console.log("wdth2:"+wdth);
-     closeMenu();
-     $('#wrapper').removeClass('toggled');
+    
+    $('#wrapper').addClass('toggled');
+    $('.nav-icon2').removeClass('open');
      
 });
 
-// default close-laptop
-closeMenu();
-
 	$('#nav-icon2').click(function(){
     $(this).toggleClass('open');
-	}); 
+  }); 
+  
+  $('.single_feature').click(function(){
+    $(this).toggleClass('laptopOpen');
+  }); 
+  
 });
 
 $("#menu-toggle").click(function(e) {
