@@ -1,29 +1,38 @@
 /*--------------------- Nav ------------------*/
 
 
-$(document).ready(function(){
-  
-  var wdth=$(window).width();
+$(document).ready(function () {
 
-  $(window).resize(function() {
-    console.log("wdth2:"+wdth);
-    
-    $('#wrapper').addClass('toggled');
-    $('.nav-icon2').removeClass('open');
-     
-});
+  var wdth = $(window).width();
 
-	$('#nav-icon2').click(function(){
+  $(window).resize(function () {
+    wdth = $(window).width();
+    console.log("wdth2:" + wdth);
+   if (wdth < 768) {
+
+      console.log("wdth2:mobile");
+      //$('#wrapper').addClass('toggled');
+      $('.nav-icon2').addClass('open');
+    }
+    /* 
+    else{
+      $('#wrapper').addClass('toggled');
+      $('.nav-icon2').removeClass('open');
+    }*/
+
+  });
+
+  $('#nav-icon2').click(function () {
     $(this).toggleClass('open');
-  }); 
-  
-  $('.single_feature').click(function(){
+  });
+
+  $('.single_feature').click(function () {
     $(this).toggleClass('laptopOpen');
-  }); 
-  
+  });
+
 });
 
-$("#menu-toggle").click(function(e) {
+$("#menu-toggle").click(function (e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
@@ -31,15 +40,15 @@ $("#menu-toggle").click(function(e) {
 $(".list-group-item").hover(
   function () {
     $(this).addClass("active");
-  }, 
+  },
   function () {
     $(this).removeClass("active");
   }
 );
 /*--------------------- Timer ------------------*/
-const fourthOfJuly =  new Date("2019/06/02 14:30:00").getTime();
+const fourthOfJuly = new Date("2019/06/02 14:30:00").getTime();
 // countdown
-let timer = setInterval(function() {
+let timer = setInterval(function () {
 
   // get today's date
   const today = new Date().getTime();
@@ -53,73 +62,74 @@ let timer = setInterval(function() {
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.getElementById("days").textContent=days
-  document.getElementById("hours").textContent=hours
-  document.getElementById("minutes").textContent=minutes
-  document.getElementById("seconds").textContent=seconds
-   
+  document.getElementById("days").textContent = days
+  document.getElementById("hours").textContent = hours
+  document.getElementById("minutes").textContent = minutes
+  document.getElementById("seconds").textContent = seconds
+
 
 }, 1000);
 
 
 /*--------------------- Show fixed vote panel------------------*/
-window.onload = function(){
-  
+window.onload = function () {
+
   //close nav
-  var wdth=$(window).width();
+  var wdth = $(window).width();
   console.log('laprtop');
-  if(wdth>=768){
+  if (wdth >= 768) {
     $('#wrapper').addClass('toggled');
-    console.log('wdth:'+wdth);
-  }else{
+    console.log('wdth:' + wdth);
+  } else {
     $('#wrapper').removeClass('toggled');
     console.log('mobile');
   }
 
-  document.onmousewheel = function(e){
-  //console.log(window.pageYOffset);
+  document.onmousewheel = function (e) {
+    //console.log(window.pageYOffset);
 
-  if(window.pageYOffset>200){
-    showFixedVote();
+    if (window.pageYOffset > 200) {
+      showFixedVote();
+    } else {
+      hideFixedVote();
+    }
   }
-  else{
-    hideFixedVote();
-  }
-  }
-  }
+}
 
-  function showFixedVote(){
-    $(".shareButton").css("position","fixed"); 
-    $(".vote").toggleClass('navbar-fixed-bottom');
-    $(".vote").css("position","fixed"); 
-  }
+function showFixedVote() {
+  $(".shareButton").css("position", "fixed");
+  $(".vote").toggleClass('navbar-fixed-bottom');
+  $(".vote").css("position", "fixed");
+}
 
-  function hideFixedVote(){
-    $(".vote").css("position","relative"); 
-    $(".vote").toggleClass('navbar-fixed-bottom');
-  }
+function hideFixedVote() {
+  $(".vote").css("position", "relative");
+  $(".vote").toggleClass('navbar-fixed-bottom');
+}
 
-  /*--------------------- Show more News ------------------*/
+/*--------------------- Show more News ------------------*/
 
-  $(".arrowCircle").click(function() {
-   
-    $(".newsList").toggleClass('open');
-  });
+$(".arrowCircle").click(function () {
 
-  
+  $(".newsList").toggleClass('open');
+});
+
+
 
 $(".newsList a").hover(
   function () {
-    $(this).css("color","#bc2d2d");
-  },function(){
-  $(this).css("color","#6f6155");
-}
+    $(this).css("color", "#bc2d2d");
+  },
+  function () {
+    $(this).css("color", "#6f6155");
+  }
 );
 
 $(".latestNews a").hover(
   function () {
-    $(this).css("color","#bc2d2d");
-  },function(){
-  $(this).css("color","#6f6155");
-}
+    $(this).css("color", "#bc2d2d");
+  },
+  function () {
+    $(this).css("color", "#6f6155");
+  }
 );

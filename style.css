@@ -127,6 +127,19 @@ body {
 
 .menuGame_front {
   z-index: 1;
+  animation: gameLabel 2s ease-in-out infinite;
+}
+
+@keyframes gameLabel {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 .menuGame_back {
@@ -334,6 +347,11 @@ body {
 }
 
 /*------------------------------ Timer -------------------- */
+.homepageMainRow{
+  border-bottom: #bc2d2d 8px solid ;
+  box-sizing: border-box;
+}
+
 #timer {
   height: 425px;
   background-color: #e8e7e6;
@@ -497,6 +515,12 @@ body {
 .col-md-4 {
   padding: 0 !important;
 }
+.countdown{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .countdown1 {
   letter-spacing: 3.5px;
@@ -567,7 +591,7 @@ body {
 
 .homepagevideo .row {
   background-color: black;
-  height: 643px;
+  height: calc(100vh - 88px);
 }
 
 .videoright {
@@ -592,7 +616,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
+  z-index: 1;
 
 }
 
@@ -909,9 +933,11 @@ ul li {
 .showLogoArrowLine2 {
   transform: translateX(9px) rotate(-135deg);
 }
-.showLogoArrow{
+
+.showLogoArrow {
   transform: rotate(90deg)
 }
+
 @media (max-width: 991px) {
   .feature_area {
     padding-bottom: 40px;
@@ -984,7 +1010,7 @@ ul li {
   margin-right: 17px;
 }
 
-.main_title{
+.main_title {
   display: flex;
   justify-content: center;
 }
@@ -1001,9 +1027,11 @@ ul li {
   margin-bottom: 78px;
   margin-top: 48px;
 }
+
 .laptopOpen .showLogoArrowLine1 {
   transform: translateY(10px) rotate(-45deg);
 }
+
 .laptopOpen .showLogoArrowLine2 {
   transform: rotate(-135deg);
 }
@@ -1013,24 +1041,26 @@ ul li {
   .footer_area {
     padding-left: 6%;
   }
+
   .showLogoArrowLine1 {
     transform: translateY(10px) rotate(-45deg)
   }
-  
+
   .showLogoArrowLine2 {
     transform: rotate(-135deg);
   }
-  
+
 
 }
+
 /*---laptop & tablet---- */
 
 
-@media screen and (min-width: 1245px){
-.middleContact{
-  margin-right: -70px !important; 
-  margin-left: -90px !important;
-}
+@media screen and (min-width: 1245px) {
+  .middleContact {
+    margin-right: -70px !important;
+    margin-left: -90px !important;
+  }
 }
 
 /* End Features Area css---- */
@@ -1045,7 +1075,6 @@ ul li {
   bottom: 0;
   display: flex;
   justify-content: flex-end;
-  margin-left: 0 !important;
 }
 
 .mobileShare {
@@ -1150,9 +1179,13 @@ ul li {
 
 /*mobile*/
 @media screen and (max-width: 768px) {
-  
+
   .videoright {
     display: none;
+  }
+
+  .voteRed {
+    transform: translateX(23px);
   }
 
   #navBackgroundOut {
@@ -1184,10 +1217,10 @@ ul li {
   .newsTop {
     text-align: center;
   }
-
   .homepageMainRow :nth-child(1) {
     order: 2;
   }
+
 
   .homepageMainRow :nth-child(2) {
     order: 1;
