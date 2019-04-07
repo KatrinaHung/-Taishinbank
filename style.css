@@ -93,6 +93,11 @@ body {
   transform: rotate(-45deg);
 }
 
+#menu-toggle:focus, #menu-toggle:active {
+  outline: none !important;
+  box-shadow: none !important;;
+}
+
 
 #nav-icon2.open span:nth-child(1) {
   left: 5px;
@@ -164,6 +169,10 @@ body {
   font-size: 12px;
   letter-spacing: 2.3px;
   margin-top: 54px;
+}
+
+.language a:hover{
+  color: #bc2d2d ;
 }
 
 .languageCn {
@@ -359,7 +368,7 @@ body {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-
+  margin-left: 15px;
 }
 
 .balloon {
@@ -515,12 +524,14 @@ body {
 .col-md-4 {
   padding: 0 !important;
 }
-.countdown{
+/*
+#countdown{
   position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
+*/
 
 .countdown1 {
   letter-spacing: 3.5px;
@@ -720,6 +731,13 @@ body {
   position: absolute;
   height: 1px;
   width: 10px;
+}
+
+.circleActive{
+  background-color: #bc2d2d;
+}
+.arrowActive, .arrowActive:before, .arrowActive:after{
+  background: #f6f5f4;
 }
 
 .arrow:before {
@@ -1179,7 +1197,8 @@ ul li {
 
 /*mobile*/
 @media screen and (max-width: 768px) {
-
+  
+  
   .videoright {
     display: none;
   }
@@ -1201,7 +1220,7 @@ ul li {
   }
 
   #menu-toggle {
-    margin-left: 4%;
+    margin-left: 2%;
   }
 
   .latestNews,
@@ -1273,6 +1292,22 @@ ul li {
   .about_left_top :nth-child(2) {
     order: 2;
   }
+
+  .homepageTime :nth-child(2) {
+    order: 2;
+}
+.live :nth-child(1) {
+  order: 1;
+}
+.live :nth-child(2) {
+  order: 2;
+}
+.live :nth-child(3) {
+  order: 4;
+}
+.live :nth-child(4) {
+  order: 4;
+}
 }
 
 @media screen and (max-width: 992px) {
