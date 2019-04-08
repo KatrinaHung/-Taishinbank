@@ -298,9 +298,7 @@ body {
   border: none !important;
 }
 
-.navbar {
-  background-color: #f6f5f4;
-}
+
 
 .navbar-nav {
   background-color: #d3d3d3;
@@ -756,7 +754,7 @@ body {
   margin-left: 70px;
   font-size: 15px;
   letter-spacing: 0.2px;
-  display: none;
+ /* display: none; */ 
 
 }
 
@@ -1194,13 +1192,84 @@ ul li {
   height: 1px;
   background-color: #f6f5f4;
 }
+/*------------------------------ Artwork_in-------------------- */
 
-/*mobile*/
+.statistics_item p{
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  color: #6f6155;
+  text-align: left;
+}
+.titleRowNarrow{
+  margin-bottom: 0;
+  
+}
+.statistics_item p:hover{
+  color: #bc2d2d;
+  cursor: pointer;
+}
+
+.colLeft_first{
+  padding-left: 0 !important;
+}
+/*------------------------------ Artwork_out-------------------- */
+.artWork_item{
+  width: 80%;
+  cursor: pointer !important;
+}
+.artWork_item p{
+  color: #6f6155;
+}
+.artwork_hr{
+  border: 1px solid #6f6155;
+}
+
+.artwork_hr1{
+  margin-top: 20px;
+  margin-bottom: 13px;
+}
+.artwork_hr2{
+  margin-top: 14px;
+  margin-bottom: 17px;
+}
+.artworkOut_area{
+  margin-top: 100px;
+}
+.artTitle{
+  font-size: 17px;
+  letter-spacing: 1.4px;
+  height: 75px;
+}
+.autherTitle{
+  font-size: 15px;
+  font-weight: 500;
+}
+.autherName{
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
+/*------------------------------ MOBILE-------------------- */
 @media screen and (max-width: 768px) {
+  .colLeft{
+    border-bottom: #D8D8D8 3px solid;
+  }
+  .colLeft_active{
+    border-bottom: #bc2d2d 3px solid;
+  }
+ 
   
-  
+  .statistics_item p{
+    text-align: center !important;
+  }
   .videoright {
     display: none;
+  }
+  .colLeft{
+    padding: 0 !important
+  }
+  .colLeft_first{
+    padding-left: 15px !important;
   }
 
   .voteRed {

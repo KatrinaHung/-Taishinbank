@@ -9,29 +9,15 @@ function openmenu() {
   $('#nav-icon2').addClass('open');
 }
 
+//reload page when resize screen
+$(window).resize(function(){location.reload();});
+
 $(document).ready(function () {
 
   var wdth = $(window).width();
 
+  // default close NAV
   closeMenu();
-
-  /* $(window).resize(function () {
-     wdth = $(window).width();
-     console.log("wdth2:" + wdth);
-     if(wdth<768){
-         if($('#wrapper').hasClass('toggled')){
-           $('#nav-icon2').addClass('open');
-       }
-     }
-     else{
-       //laptop
-       if($('#wrapper').hasClass('toggled')){
-         $('#nav-icon2').removeClass('open');
-       }
-     }
-    
-   });
-   */
 
 
   //footer
@@ -40,17 +26,13 @@ $(document).ready(function () {
   });
 
 
-
+  //click burger
   $("#menu-toggle").click(function (e) {
     e.preventDefault();
-    if ($('#wrapper').hasClass('toggled')) {
-      closeMenu()
-      console.log('close');
-    } else {
-      openmenu();
-      console.log('open');
-    }
-
+    $('#wrapper').toggleClass('toggled');
+    $('#nav-icon2').toggleClass('open');
+    //$('#menu-toggle').toggleClass('open');
+    $('.navbar').toggleClass('open');
   });
 });
 $(".list-group-item").hover(
@@ -61,6 +43,19 @@ $(".list-group-item").hover(
     $(this).removeClass("active");
   }
 );
+$(".artWork_item").hover(function(){
+  $(".artWork_item p").css("color","#bc2d2d")
+  $(".artwork_hr").css("border-color","#bc2d2d")
+  
+},function(){
+  $(".artWork_item p").css("color","#6f6155")
+  $(".artwork_hr").css("border-color","#6f6155")
+})
+// change submenu red border
+$(".colLeft").click(function(){
+  $(".colLeft").css("border-color","#D8D8D8");
+  $(this).css("border-color","#bc2d2d");
+})
 /*--------------------- Timer ------------------*/
 const fourthOfJuly = new Date("2019/06/02 14:30:00").getTime();
 // countdown
