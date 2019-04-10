@@ -43,18 +43,30 @@ $(".list-group-item").hover(
     $(this).removeClass("active");
   }
 );
+/*--------------------- Artwork_out ------------------*/
 $(".artWork_item").hover(function(){
-  $(".artWork_item p").css("color","#bc2d2d")
-  $(".artwork_hr").css("border-color","#bc2d2d")
+  $('p', this).css("color","#bc2d2d");
+  $('.artwork_hr', this).css("border-color","#bc2d2d")
+ 
+ $('.artWorkPhoto', this).css("opacity", "0.2");
+ $('.redBall', this).css("display", "block");
+ $('.redBall', this).css("opacity", "1");
   
 },function(){
   $(".artWork_item p").css("color","#6f6155")
   $(".artwork_hr").css("border-color","#6f6155")
+  $('.artWorkPhoto', this).css("opacity", "1");
+  $('.artWorkPhoto', this).css("opacity", "1");
+  $('.redBall', this).css("display", "none");
+ 
 })
+
+
 // change submenu red border
 $(".colLeft").click(function(){
   $(".colLeft").css("border-color","#D8D8D8");
   $(this).css("border-color","#bc2d2d");
+
 })
 /*--------------------- Timer ------------------*/
 const fourthOfJuly = new Date("2019/06/02 14:30:00").getTime();
@@ -99,10 +111,6 @@ window.onload = function () {
     closeMenu();
     console.log('mobile');
   }
-
-
-
-
 
   document.onmousewheel = function (e) {
     //console.log(window.pageYOffset);
@@ -161,3 +169,53 @@ $(".latestNews a").hover(
     $(this).css("color", "#6f6155");
   }
 );
+
+/*-------------------------------------------------------------------------------
+	  featured slider
+	-------------------------------------------------------------------------------*/
+  if ($('.featured-carousel').length) {
+    $('.featured-carousel').owlCarousel({
+        loop: false,
+        margin: 30,
+        items: 1,
+        nav: true,
+        dots: false,
+        responsiveClass: true,
+        slideSpeed: 300,
+        paginationSpeed: 500,
+        navText : ["<div class='left-arrow'><i class='ti-angle-left'></i></div>","<div class='right-arrow'><i class='ti-angle-right'></i></div>"],
+        responsive: {
+            768: {
+                items: 2
+            },
+            1100: {
+                items: 3
+            }
+        }
+    })
+}
+
+
+
+/*-------------------------------------------------------------------------------
+featured slider
+-------------------------------------------------------------------------------*/
+if ($('.hero-carousel').length) {
+    $('.hero-carousel').owlCarousel({
+        loop: false,
+        margin: 30,
+        items: 1,
+        nav: false,
+        dots: true,
+        responsiveClass: true,
+        slideSpeed: 300,
+        paginationSpeed: 500
+    })
+}
+
+
+
+
+});
+
+
