@@ -183,10 +183,39 @@ $(".lookDown").click(function () {
 
 /*--------------------- artwork out buttons ------------------*/
 $(".artIntro_CircleButton1").click(function () {
+  $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
+  $(".artIntro_CircleButton p").css("color", "#bc2d2d");
+  
+
   $(this).css("background-color", "#bc2d2d");
-  $('p', this).css("color", "#6f6155");
+  $('p', this).css("color", "#f6f5f4");
+  $(".aboutArtBlock1").css("display","block");
+  $(".aboutArtBlock2").css("display","none");
+  $(".aboutArtBlock3").css("display","none");
 });
 
+$(".artIntro_CircleButton2").click(function () {
+  $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
+  $('.artIntro_CircleButton p').css("color", "#bc2d2d");
+
+  $(this).css("background-color", "#bc2d2d");
+  $('p', this).css("color", "#f6f5f4");
+  $(".aboutArtBlock1").css("display","none");
+  $(".aboutArtBlock2").css("display","block");
+  $(".aboutArtBlock3").css("display","none");
+});
+
+$(".artIntro_CircleButton3").click(function () {
+  $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
+  $('.artIntro_CircleButton p').css("color", "#bc2d2d");
+
+  $(this).css("background-color", "#bc2d2d");
+  $('p', this).css("color", "#f6f5f4");
+
+  $(".aboutArtBlock1").css("display","none");
+  $(".aboutArtBlock2").css("display","none");
+  $(".aboutArtBlock3").css("display","block");
+});
 
 
 /*--------------------- Show more News ------------------*/

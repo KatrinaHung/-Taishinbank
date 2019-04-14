@@ -1335,6 +1335,22 @@ ul li {
 }
 
 /*------------------------------ Artwork In -------------------- */
+.circlepoint{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #6f6155;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.linkitem{
+  display: flex;
+  vertical-align: center;
+}
+.aboutArtBlock2, .aboutArtBlock3{
+  display: none;
+}
 .artIntro {
   padding-right: 40px;
 }
@@ -1437,11 +1453,12 @@ ul li {
   padding: 0;
 }
 
-.aboutArt li {
+.aboutArt p {
   color: #6f6155;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .aboutArt li:hover {
@@ -1622,14 +1639,26 @@ ul li {
 }
 
 @media screen and (max-width: 767px) {
-  /*.speechContent_Row {
+  .mobileShare {
+    left: 0;
+  }
+
+  .voteWord p {
+    margin-right: 55px;
+  }
+
+  .voteRed {
+    transform: translateX(30px);
+  }
+
+  .speechContent_Row {
     margin-left: 0 !important;
   }
 
   .speechContent_Row .row {
     margin-left: 0 !important;
   }
-  */
+
 
   .dataBall {
     width: 45px;
@@ -1892,6 +1921,12 @@ ul li {
 
   .navbar-brand {
     padding-right: 0px;
+  }
+  .noBorder{
+    border: none ;
+  }
+  .aboutArtist {
+    padding-top: 60px;
   }
 }
 
