@@ -1622,13 +1622,14 @@ ul li {
 }
 
 @media screen and (max-width: 767px) {
-  .speechContent_Row {
+  /*.speechContent_Row {
     margin-left: 0 !important;
   }
 
   .speechContent_Row .row {
     margin-left: 0 !important;
   }
+  */
 
   .dataBall {
     width: 45px;
