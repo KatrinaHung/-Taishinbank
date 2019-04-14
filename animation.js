@@ -49,7 +49,55 @@ $(".list-group-item").hover(
   }
 );
 
+/*--------------------- Speech Date button click------------------*/
 
+$(".dataBall_1").click(function (e) {
+  e.preventDefault();
+  $(".dataBall").css("background-color", "#f6f5f4")
+  $(".dataBall p").css("color", "#bc2d2d")
+
+
+  $(this).css("background-color", "#bc2d2d")
+  $('p', this).css("color", "#f6f5f4");
+});
+
+$(".dataBall_2").click(function (e) {
+  e.preventDefault();
+  $(".dataBall").css("background-color", "#f6f5f4")
+  $(".dataBall p").css("color", "#bc2d2d")
+
+
+  $(this).css("background-color", "#bc2d2d")
+  $('p', this).css("color", "#f6f5f4");
+});
+
+$(".dataBall_3").click(function (e) {
+  e.preventDefault();
+  $(".dataBall").css("background-color", "#f6f5f4")
+  $(".dataBall p").css("color", "#bc2d2d")
+
+
+  $(this).css("background-color", "#bc2d2d")
+  $('p', this).css("color", "#f6f5f4");
+});
+$(".dataBall_4").click(function (e) {
+  e.preventDefault();
+  $(".dataBall").css("background-color", "#f6f5f4")
+  $(".dataBall p").css("color", "#bc2d2d")
+
+
+  $(this).css("background-color", "#bc2d2d")
+  $('p', this).css("color", "#f6f5f4");
+});
+$(".dataBall_5").click(function (e) {
+  e.preventDefault();
+  $(".dataBall").css("background-color", "#f6f5f4")
+  $(".dataBall p").css("color", "#bc2d2d")
+
+
+  $(this).css("background-color", "#bc2d2d")
+  $('p', this).css("color", "#f6f5f4");
+});
 /*--------------------- Artwork_out ------------------*/
 $(".artWork_item").hover(function () {
   $('p', this).css("color", "#bc2d2d");
@@ -131,6 +179,15 @@ $(".lookDown").click(function () {
     scrollTop: $('.newsTop').offset().top - 80
   }, 500);
 });
+
+
+/*--------------------- artwork out buttons ------------------*/
+$(".artIntro_CircleButton1").click(function () {
+  $(this).css("background-color", "#bc2d2d");
+  $('p', this).css("color", "#6f6155");
+});
+
+
 
 /*--------------------- Show more News ------------------*/
 $(".arrowCircle").click(function () {
