@@ -182,40 +182,68 @@ $(".lookDown").click(function () {
 
 
 /*--------------------- artwork out buttons ------------------*/
-$(".artIntro_CircleButton1").click(function () {
+function artIntro_ColorDefault() {
   $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
   $(".artIntro_CircleButton p").css("color", "#bc2d2d");
-  
+  $(".artIntro_arrow").attr("src", "./material/image/紅箭頭.png");
+
+}
+$(".artIntro_CircleButton1").click(function () {
+  artIntro_ColorDefault();
 
   $(this).css("background-color", "#bc2d2d");
   $('p', this).css("color", "#f6f5f4");
-  $(".aboutArtBlock1").css("display","block");
-  $(".aboutArtBlock2").css("display","none");
-  $(".aboutArtBlock3").css("display","none");
+  $(".artIntro_arrow", this).attr("src", "./material/image/白箭頭.png");
+
+  $(".aboutArtBlock1").css("display", "block");
+  $(".aboutArtBlock2").css("display", "none");
+  $(".aboutArtBlock3").css("display", "none");
 });
 
+const newLocal = ".aboutArtBlock2";
 $(".artIntro_CircleButton2").click(function () {
-  $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
-  $('.artIntro_CircleButton p').css("color", "#bc2d2d");
+  artIntro_ColorDefault();
 
   $(this).css("background-color", "#bc2d2d");
   $('p', this).css("color", "#f6f5f4");
-  $(".aboutArtBlock1").css("display","none");
-  $(".aboutArtBlock2").css("display","block");
-  $(".aboutArtBlock3").css("display","none");
+  $(".artIntro_arrow", this).attr("src", "./material/image/白箭頭.png");
+
+  $(".aboutArtBlock1").css("display", "none");
+  $(newLocal).css("display", "block");
+  $(".aboutArtBlock3").css("display", "none");
 });
 
 $(".artIntro_CircleButton3").click(function () {
-  $(".artIntro_CircleButton").css("background-color", "#f6f5f4");
-  $('.artIntro_CircleButton p').css("color", "#bc2d2d");
+  artIntro_ColorDefault();
 
   $(this).css("background-color", "#bc2d2d");
   $('p', this).css("color", "#f6f5f4");
+  $(".artIntro_arrow", this).attr("src", "./material/image/白箭頭.png");
 
-  $(".aboutArtBlock1").css("display","none");
-  $(".aboutArtBlock2").css("display","none");
-  $(".aboutArtBlock3").css("display","block");
+  $(".aboutArtBlock1").css("display", "none");
+  $(".aboutArtBlock2").css("display", "none");
+  $(".aboutArtBlock3").css("display", "block");
 });
+/*--------------------- artwork out link hover ------------------*/
+
+$(".linkitem").hover(
+  function () {
+    $('p', this).css("color", "#bc2d2d");
+    $('.circlepoint', this).css("background-color", "#bc2d2d");
+  },
+  function () {
+    $('p', this).css("color", "#6f6155");
+    $('.circlepoint', this).css("background-color", "#6f6155");
+  }
+);
+
+
+$(".statistics_item").click(function () {
+
+  $('.statistics_item p').css("color", "#6f6155");
+  $('p', this).css("color", "#bc2d2d");
+});
+
 
 
 /*--------------------- Show more News ------------------*/

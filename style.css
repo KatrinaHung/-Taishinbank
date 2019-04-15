@@ -9,6 +9,8 @@ body {
   color: #6f6155;
 }
 
+
+
 /*------------------------------ Sidebar -------------------- */
 body {
   overflow-x: hidden;
@@ -375,7 +377,7 @@ body {
 }
 
 #sidebarCollapse {
-  x-index: 10;
+  z-index: 10;
 }
 
 /*------------------------------ Timer -------------------- */
@@ -1241,6 +1243,10 @@ ul li {
 
 }
 
+.statistics_item_1 p {
+  color: #bc2d2d;
+}
+
 .statistics_item p:hover {
   color: #bc2d2d;
   cursor: pointer;
@@ -1248,6 +1254,11 @@ ul li {
 
 
 /*------------------------------ Artwork_out-------------------- */
+.circlepoint span {
+  display: block;
+  color: transparent;
+}
+
 .artworkOut_row {
   padding-bottom: 50px;
 }
@@ -1335,7 +1346,12 @@ ul li {
 }
 
 /*------------------------------ Artwork In -------------------- */
-.circlepoint{
+.artIntro_arrow {
+  position: absolute;
+  top: 145px;
+}
+
+.circlepoint {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -1344,15 +1360,19 @@ ul li {
   margin-top: 4px;
 }
 
-.linkitem{
+.linkitem {
   display: flex;
   vertical-align: center;
 }
-.aboutArtBlock2, .aboutArtBlock3{
+
+.aboutArtBlock2,
+.aboutArtBlock3 {
   display: none;
 }
+
 .artIntro {
   padding-right: 40px;
+  margin-bottom: 50px;
 }
 
 .artIntro p {
@@ -1475,6 +1495,15 @@ ul li {
   padding-right: 70px;
 }
 
+.artIntro_CircleButton1 {
+  background-color: #bc2d2d;
+}
+
+.artIntro_CircleButton1 p {
+  color: #f6f5f4;
+}
+
+
 /*------------------------------ Speech -------------------- */
 
 .dataBall {
@@ -1525,6 +1554,7 @@ ul li {
 
 .dateballs {
   margin-top: 65px;
+  margin-bottom: 65px;
 }
 
 .speechType1 {
@@ -1532,7 +1562,7 @@ ul li {
   font-weight: 500;
   letter-spacing: 1.3px;
   color: #bc2d2d;
-  margin-top: 75px;
+  margin-top: 35px;
 }
 
 
@@ -1554,11 +1584,11 @@ ul li {
 
 .registerButton_front {
   border: solid 1px #bc2d2d;
-  background-color: #f6f5f4;
+  background-color: #bc2d2d;
 }
 
 .registerButton_front p {
-  color: #bc2d2d !important;
+  color: #f6f5f4 !important;
 }
 
 .registerButton_back {
@@ -1622,11 +1652,8 @@ ul li {
 }
 
 /*------------------------------ MOBILE-------------------- */
-@media screen and (max-width: 480px) {
 
-  .mobileShare {
-    left: 0;
-  }
+@media screen and (max-width: 480px) {
 
   .voteWord p {
     margin-right: 55px;
@@ -1636,11 +1663,28 @@ ul li {
     transform: translateX(30px);
   }
 
+  .text {
+    margin-top: 17px;
+  }
+
+  #navBackground {
+    width: calc(90% - 260px);
+  }
+
+  .mobileShare {
+    left: 0;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
   .mobileShare {
     left: 0;
+  }
+
+  .artIntro_arrow {
+    top: 108px;
+    width: 10px;
   }
 
   .voteWord p {
@@ -1689,7 +1733,7 @@ ul li {
   }
 
   .artIntro_Buttons {
-    transform: translateX(-15px);
+    transform: translateX(-20px);
   }
 
   #countdown {
@@ -1900,9 +1944,8 @@ ul li {
     margin-bottom: 30px;
   }
 
-  .statistics_area,
   .artworkOut_area {
-    margin-left: 2%;
+    margin-left: 20px;
   }
 
   .copyright {
@@ -1922,11 +1965,18 @@ ul li {
   .navbar-brand {
     padding-right: 0px;
   }
-  .noBorder{
-    border: none ;
+
+  .noBorder {
+    border: none;
   }
+
   .aboutArtist {
     padding-top: 60px;
+    padding-right: 25px;
+  }
+
+  .circlepoint {
+    width: 15px;
   }
 }
 
@@ -1950,5 +2000,9 @@ ul li {
   .artIntro_Circle {
     width: 130px;
     height: 130px;
+  }
+
+  .artIntro_arrow {
+    top: 125px;
   }
 }

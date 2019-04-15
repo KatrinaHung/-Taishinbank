@@ -3,7 +3,7 @@ x = 0
 function countSecond() {
     x = x + 1
     console.log(x);
-    // setTimeout("countSecond( )", 1000);
+    setTimeout("countSecond( )", 1000);
     if (x % 5 == 0) {
         $(".questionCircle").css("opacity", "0")
         $(".questionCircle_1").css("opacity", "1")
@@ -27,4 +27,7 @@ function countSecond() {
 
 }
 
-countSecond();
+
+$(document).ready(function () {
+    countSecond();
+});

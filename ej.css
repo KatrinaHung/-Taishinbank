@@ -1,0 +1,1163 @@
+h1,
+h2,
+h3 {
+    color: #6E6155;
+    font-weight: normal !important;
+}
+
+#navBackground {
+    background-image: none;
+}
+
+/* Pure CSS3 Lightbox start */
+.lightbox-target {
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    /* 預設透明度為 0，觸發 :target 後，利用動畫效果調整透明度 */
+    opacity: 0;
+    position: fixed;
+    top: -100%;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+/* 當 :target 觸發後，index-target 的透明度為 1 */
+.lightbox-target:target {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.lightbox-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.content {
+    font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 417px;
+    height: 520px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    background: #fff;
+    margin: auto;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content p {
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content p:after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    left: 5%;
+    border-bottom-style: dashed;
+    border-bottom-width: 2px;
+    bottom: 0;
+}
+
+.content p span {
+    display: block;
+    font-size: 14px;
+}
+
+.content h1 {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.content .circle {
+    position: relative;
+}
+
+.content .circle:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 210px;
+    height: 210px;
+    border-radius: 50em;
+}
+
+.content .pic img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50em;
+    position: absolute;
+    right: 0;
+}
+
+.content .btn {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -75px;
+    text-align: left;
+}
+
+.mobile {
+    display: none;
+}
+
+.btn ul {
+    padding: 0;
+}
+
+.btn li {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.btn li a {
+    padding: 10px 8px 12px 8px;
+    background: #6f6156;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn li:first-child {
+    margin-right: 5px;
+}
+
+.btn li:last-child {
+    float: right;
+    margin-top: 2px;
+    letter-spacing: 1px;
+}
+
+.btn li:last-child a {
+    padding: 10px 15px 12px 15px;
+}
+
+.btn li img {
+    max-width: 26px;
+}
+
+/*------------------------------ EJ-------------------- */
+.game .top {
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.game .logo {
+    max-height: 45px;
+
+}
+
+.area {
+    max-width: 1255px;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.ball {
+    width: 170px;
+    height: 170px;
+    border-radius: 50em;
+    position: absolute;
+}
+
+.ball.off {
+    background: #f9f9f9;
+}
+
+.color1 {
+    left: 0;
+    top: 117px;
+    background: #784c8b;
+}
+
+.color2 {
+    left: 190px;
+    top: 40px;
+    background: #d8dd07;
+}
+
+.color3 {
+    left: 412px;
+    top: 78px;
+    background: #ff4e68;
+}
+
+.color4 {
+    left: 260px;
+    top: 224px;
+    background: #546956;
+}
+
+.color5 {
+    left: 23px;
+    top: 314px;
+    background: #16ddd8;
+}
+
+.color6 {
+    left: 220px;
+    top: 417px;
+    background: #a69079;
+}
+
+.color7 {
+    left: 431px;
+    top: 335px;
+    background: #f6ba7e;
+}
+
+.color8 {
+    left: 568px;
+    top: 192px;
+    background: #fffec8;
+}
+
+.color9 {
+    left: 695px;
+    top: 50px;
+    background: #346d8a;
+}
+
+.color10 {
+    left: 694px;
+    top: 356px;
+    background: #fd7f80;
+}
+
+.color11 {
+    left: 899px;
+    top: 29px;
+    background: #ff8560;
+}
+
+.color12 {
+    left: 836px;
+    top: 228px;
+    background: #4ebae8;
+}
+
+.color13 {
+    left: 887px;
+    top: 428px;
+    background: #618085;
+}
+
+.color14 {
+    left: 1079px;
+    top: 122px;
+    background: #134d8c;
+}
+
+.color15 {
+    left: 1055px;
+    top: 318px;
+    background: #ff4791;
+}
+
+/*--------------------------CARD-------------------- */
+
+#color1 .lightbox-close {
+    background: url(material/image/close/1.png);
+    background-size: contain;
+}
+
+#color1 .content {
+    background: #ffe5ce;
+}
+
+#color1 .circle:before {
+    background: #784c8b;
+}
+
+#color1 p,
+#color1 h1 {
+    color: #784c8b;
+}
+
+#color2 .lightbox-close {
+    background: url(material/image/close/2.png);
+    background-size: contain;
+}
+
+#color2 .content {
+    background: #225067;
+}
+
+#color2 .circle:before {
+    background: #d8dd07;
+}
+
+#color2 p,
+#color2 h1 {
+    color: #d8dd07;
+}
+
+
+
+#color3 .lightbox-close {
+    background: url(material/image/close/3.png);
+    background-size: contain;
+}
+
+#color3 .content {
+    background: #e5d9c9;
+}
+
+#color3 .circle:before {
+    background: #ff4e68;
+}
+
+#color3 p,
+#color3 h1 {
+    color: #ff4e68;
+}
+
+
+#color4 .lightbox-close {
+    background: url(material/image/close/4.png);
+    background-size: contain;
+}
+
+#color4 .content {
+    background: #ffe1d7;
+}
+
+#color4 .circle:before {
+    background: #546956;
+}
+
+#color4 p,
+#color4 h1 {
+    color: #546956;
+}
+
+#color5 .lightbox-close {
+    background: url(material/image/close/5.png);
+    background-size: contain;
+}
+
+#color5 .content {
+    background: #575757;
+}
+
+#color5 .circle:before {
+    background: #16ddd8;
+}
+
+#color5 p,
+#color5 h1 {
+    color: #16ddd8;
+}
+
+#color6 .lightbox-close {
+    background: url(material/image/close/6.png);
+    background-size: contain;
+}
+
+#color6 .content {
+    background: #053972;
+}
+
+#color6 .circle:before {
+    background: #a69079;
+}
+
+#color6 p,
+#color6 h1 {
+    color: #a69079;
+}
+
+#color7 .lightbox-close {
+    background: url(material/image/close/7.png);
+    background-size: contain;
+}
+
+#color7 .content {
+    background: #44606e;
+}
+
+#color7 .circle:before {
+    background: #f6ba7e;
+}
+
+#color7 p,
+#color7 h1 {
+    color: #f6ba7e;
+}
+
+#color8 .lightbox-close {
+    background: url(material/image/close/8.png);
+    background-size: contain;
+}
+
+#color8 .content {
+    background: #3387a9;
+}
+
+#color8 .circle:before {
+    background: #fffec8;
+}
+
+#color8 p,
+#color8 h1 {
+    color: #fffec8;
+}
+
+#color9 .lightbox-close {
+    background: url(material/image/close/9.png);
+    background-size: contain;
+}
+
+#color9 .content {
+    background: #fcc896;
+}
+
+#color9 .circle:before {
+    background: #346d8a;
+}
+
+#color9 p,
+#color9 h1 {
+    color: #346d8a;
+}
+
+#color10 .lightbox-close {
+    background: url(material/image/close/10.png);
+    background-size: contain;
+}
+
+#color10 .content {
+    background: #e5d9c9;
+}
+
+#color10 .circle:before {
+    background: #fd7f80;
+}
+
+#color10 p,
+#color10 h1 {
+    color: #fd7f80;
+}
+
+#color11 .lightbox-close {
+    background: url(material/image/close/11.png);
+    background-size: contain;
+}
+
+#color11 .content {
+    background: #054f50;
+}
+
+#color11 .circle:before {
+    background: #ff8560;
+}
+
+#color11 p,
+#color11 h1 {
+    color: #ff8560;
+}
+
+
+#color12 .lightbox-close {
+    background: url(material/image/close/12.png);
+    background-size: contain;
+}
+
+#color12 .content {
+    background: #ffd5d6;
+}
+
+#color12 .circle:before {
+    background: #4ebae8;
+}
+
+#color12 p,
+#color12 h1 {
+    color: #4ebae8;
+}
+
+#color13 .lightbox-close {
+    background: url(material/image/close/13.png);
+    background-size: contain;
+}
+
+#color13 .content {
+    background: #fffec8;
+}
+
+#color13 .circle:before {
+    background: #618085;
+}
+
+#color13 p,
+#color13 h1 {
+    color: #618085;
+}
+
+#color14 .lightbox-close {
+    background: url(material/image/close/14.png);
+    background-size: contain;
+}
+
+#color14 .content {
+    background: #ccac7b;
+}
+
+#color14 .circle:before {
+    background: #134d8c;
+}
+
+#color14 p,
+#color14 h1 {
+    color: #134d8c;
+}
+
+#color15 .lightbox-close {
+    background: url(material/image/close/15.png);
+    background-size: contain;
+}
+
+#color15 .content {
+    background: #cecece;
+}
+
+#color15 .circle:before {
+    background: #ff4791;
+}
+
+#color15 p,
+#color15 h1 {
+    color: #ff4791;
+}
+
+/*--------------------------CARD END-------------------- */
+.letsgo {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+    color: #6f6155;
+}
+
+.letsgo a p {
+    margin-top: 0;
+}
+
+.letsgo p {
+    margin-top: 30px;
+}
+
+.logo {
+    max-height: 32px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.page {
+    min-height: calc(100vh - 80px);
+    letter-spacing: 1px;
+    background: #F6F5F4;
+    position: relative;
+    width: 100%;
+    font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+    color: #6f6155;
+}
+
+.about h2 {
+    font-size: 22px;
+}
+
+.about ul {
+    padding: 0;
+}
+
+.about .bg-red {
+    padding-top: 15%;
+    height: calc(40vh - 94px);
+}
+
+.about .bg-gray {
+    padding-top: 15%;
+    height: calc(60vh - 94px);
+}
+
+.about .shareButton {
+    position: absolute;
+    right: 0;
+    top: 120px;
+}
+
+.flo-right {
+    float: right;
+}
+
+.flo-left {
+    float: left;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.text h2 {
+    margin-bottom: 30px;
+}
+
+.text {
+    margin-top: 108px;
+    line-height: 30px;
+}
+
+.tip {
+
+    padding: 15px 30px;
+}
+
+/* Style the tab */
+.tab button:focus {
+    outline: none
+}
+
+.tab button {
+    background-color: none;
+    display: inline;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+    color: #bc2d2d;
+    padding-bottom: 30px;
+    width: 100%;
+    min-height: 205px;
+    max-width: 180px;
+    background: url(material/image/tab-off.svg) top center no-repeat;
+    background-size: contain;
+
+}
+
+.tab {
+    position: relative;
+}
+
+.tab:after {
+    position: absolute;
+    content: "";
+    padding: 16px;
+    left: 49%;
+    bottom: -10px;
+    background: url(material/image/team.svg) top center no-repeat;
+    background-size: contain;
+}
+
+.tab button:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.tab button.active,
+.tab button:hover {
+    color: #fff;
+    background: url(material/image/tab-on.svg) top center no-repeat;
+    background-size: contain;
+}
+
+.tab-inner {
+    padding: 15px;
+    height: 50px;
+}
+
+.tabcontent {
+    margin-top: 30px;
+    display: block;
+}
+
+.title-center {
+    padding: 35px 0;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.bg-gray {
+    background: #e9e8e6;
+}
+
+.bg-red {
+    background: #bc2d2d;
+    color: #fff;
+}
+
+.bg-red a {
+    color: #fff;
+}
+
+.bg-red a:hover {
+    color: #fff;
+}
+
+.plus ul li,
+.win ul li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 25%;
+}
+
+.plus ul {
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.plus {
+    position: relative;
+}
+
+.picture {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.win ul li:before {
+    position: absolute;
+    left: 0;
+}
+
+.win ul li:first-child:before {
+    content: "年度大獎";
+}
+
+.win ul li:nth-child(2):before {
+    content: "視覺藝術獎";
+}
+
+.win ul li:nth-child(3):before {
+    content: "表演藝術獎";
+}
+
+.plus ul li:before {
+    position: absolute;
+    content: "+";
+    left: 50px;
+    font-size: 22px;
+}
+
+.cercle-arrow {
+    position: absolute;
+    right: -35%;
+    top: -236%;
+    width: 200px;
+}
+
+.cercle {
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+    position: absolute;
+    left: 48px;
+    border-radius: 50em;
+    border: 1px solid #fff;
+    -webkit-animation: toptodown 5s infinite;
+    -moz-animation: toptodown 5s infinite;
+    -o-animation: toptodown 5s infinite;
+    animation: toptodown 5s infinite;
+}
+
+@-webkit-keyframes toptodown {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(90px);
+    }
+}
+
+@-moz-keyframes toptodown {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(90px);
+    }
+}
+
+@-o-keyframes toptodown {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(90px);
+    }
+}
+
+@keyframes toptodown {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(80px);
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .win ul li {
+        padding-left: 35%;
+    }
+
+    .plus ul li {
+        padding-left: 15%;
+    }
+
+    .plus ul li:before {
+        left: 0;
+    }
+
+    .cercle {
+        left: -2px;
+    }
+
+    .cercle-arrow {
+        position: absolute;
+        right: -40%;
+        max-width: 176px;
+        top: -167%;
+    }
+
+    .tabcontent {
+        max-height: 440px;
+        overflow-y: auto;
+    }
+
+    .about .bg-red {
+        padding-top: 10%;
+    }
+
+
+    .picture {
+        height: 71vh;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .text {
+        line-height: 24px;
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .about .bg-red,
+    .about .bg-gray {
+        padding: 30px 0;
+    }
+
+    .tabcontent {
+        max-height: 400px;
+    }
+
+    .cercle-arrow {
+        top: -134%;
+        width: 170px;
+    }
+
+    .picture {
+        height: 78vh;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .text {
+        max-height: 450px;
+        overflow-y: auto;
+    }
+
+    .picture {
+        height: 70vh;
+    }
+}
+
+/*------------------------------ MOBILE-------------------- */
+@media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+
+    .tabcontent,
+    .text,
+    .plus ul {
+        max-height: none;
+    }
+
+    .page {
+        height: auto;
+    }
+
+    .about .bg-red,
+    .about .bg-gray {
+        padding: 30px 0;
+        height: auto;
+    }
+
+    .text {
+        padding: 15px;
+        font-size: 15px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        -ms-text-justify: inter-ideograph;
+        /*IE9*/
+        -moz-text-align-last: justify;
+        /*Firefox*/
+        -webkit-text-align-last: justify;
+        /*Chrome*/
+    }
+
+
+    .flo-right,
+    .flo-left {
+        padding-left: 0;
+        float: none;
+    }
+
+    .w40,
+    .w50,
+    .w60 {
+        width: 100%;
+    }
+
+    .tip {
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    .tab button {
+        transition: 0;
+    }
+
+    .tab button,
+    .tab button:focus {
+        min-height: 150px;
+        max-width: 140px;
+    }
+
+
+    .tab:after {
+        padding: 13px;
+        left: 46%;
+    }
+
+    .colLeft {
+        border-bottom: #D8D8D8 3px solid;
+    }
+
+    .colLeft_active {
+        border-bottom: #bc2d2d 3px solid;
+    }
+
+    .copyright {
+        margin: 20px;
+    }
+
+    .game .logo {
+        max-height: 30px;
+
+    }
+
+    .area {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .ball {
+        width: 155px;
+        height: 155px;
+    }
+
+    .letsgo {
+        bottom: 15px;
+    }
+
+    .color1 {
+        left: 5%;
+        top: 10%;
+    }
+
+    .color2 {
+        left: 30%;
+        top: 16%;
+    }
+
+    .color3 {
+        left: 54%;
+        top: 8%;
+    }
+
+    .color4 {
+        left: 2%;
+        top: 26%;
+    }
+
+    .color5 {
+        left: 27%;
+        top: 31%;
+    }
+
+    .color6 {
+        left: 52%;
+        top: 26%;
+    }
+
+    .color7 {
+        left: 74%;
+        top: 18%;
+    }
+
+    .color8 {
+        left: 4%;
+        top: 41%;
+    }
+
+    .color9 {
+        left: 26%;
+        top: 50%;
+    }
+
+    .color10 {
+        left: 72%;
+        top: 36%;
+    }
+
+    .color11 {
+        left: 48%;
+        top: 42%;
+    }
+
+    .color12 {
+        left: 3%;
+        top: 58%;
+    }
+
+    .color13 {
+        left: 72%;
+        top: 51%;
+    }
+
+    .color14 {
+        left: 49%;
+        top: 58%;
+    }
+
+    .color15 {
+        left: 26%;
+        top: 66%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mobile {
+        display: block
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .flo-right,
+    .flo-left {
+        padding-left: calc(6% - 1px);
+    }
+
+    .voteWord p {
+        margin-right: 55px;
+    }
+
+    .voteRed {
+        transform: translateX(30px);
+    }
+
+    .text {
+        margin-top: 17px;
+    }
+
+    #navBackground {
+        width: calc(90% - 260px);
+    }
+
+    .mobileShare {
+        left: 0;
+    }
+
+    .tab {
+        margin-top: 30px;
+    }
+
+    .ball {
+        width: 92px;
+        height: 92px;
+    }
+
+    .content {
+        width: 90%;
+        height: 430px;
+    }
+
+    .content h1 {
+        font-size: 22px;
+        padding: 0;
+    }
+
+    .content .btn {
+        bottom: -70px;
+    }
+
+    .content .pic img,
+    .content .circle:before {
+        width: 150px;
+        height: 150px;
+    }
+}
